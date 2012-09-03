@@ -2,7 +2,7 @@ package core;
 
 /**
  * Hello world!
- * Test
+ * Test 2
  *
  */
 public class App 
