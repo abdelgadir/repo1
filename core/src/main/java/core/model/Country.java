@@ -11,6 +11,7 @@ import net.vz.mongodb.jackson.MongoCollection;
 public class Country extends BaseEntity implements I18nIF{
     private String countryCode;
     private String flagImageFilePath;
+    private String description;
 
     public Country(String countryCode) {
         this.countryCode = countryCode;
@@ -34,5 +35,13 @@ public class Country extends BaseEntity implements I18nIF{
 
     public I18nToken getI18nToken() {
         return I18nToken.i18nCountryToken;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
