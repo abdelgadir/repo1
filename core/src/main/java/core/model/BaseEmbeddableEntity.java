@@ -8,6 +8,5 @@ import java.io.Serializable;
  * Date: 03/09/12
  * Time: 12:33
  */
-@JsonSerialize(include = JsonSerialize.Inclusion.ALWAYS)
-public abstract class BaseEmbeddableEntity implements Serializable {
+public abstract class BaseEmbeddableEntity extends BaseEntity{
 }

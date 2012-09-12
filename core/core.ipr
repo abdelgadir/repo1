@@ -202,6 +202,61 @@
   </component>
   <component name="WebServicesPlugin" addRequiredLibraries="true" />
   <component name="libraryTable">
+    <library name="Maven: com.googlecode.jeeunit:jeeunit-cdi:0.9.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/googlecode/jeeunit/jeeunit-cdi/0.9.0/jeeunit-cdi-0.9.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/googlecode/jeeunit/jeeunit-cdi/0.9.0/jeeunit-cdi-0.9.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/googlecode/jeeunit/jeeunit-cdi/0.9.0/jeeunit-cdi-0.9.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.googlecode.jeeunit:jeeunit-weld-se:0.9.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/googlecode/jeeunit/jeeunit-weld-se/0.9.0/jeeunit-weld-se-0.9.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/googlecode/jeeunit/jeeunit-weld-se/0.9.0/jeeunit-weld-se-0.9.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/googlecode/jeeunit/jeeunit-weld-se/0.9.0/jeeunit-weld-se-0.9.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.googlecode.jeeunit:jeeunit:0.9.0">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/googlecode/jeeunit/jeeunit/0.9.0/jeeunit-0.9.0.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/googlecode/jeeunit/jeeunit/0.9.0/jeeunit-0.9.0-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/googlecode/jeeunit/jeeunit/0.9.0/jeeunit-0.9.0-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.sun.jersey:jersey-client:1.8">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-client/1.8/jersey-client-1.8.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-client/1.8/jersey-client-1.8-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-client/1.8/jersey-client-1.8-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: com.sun.jersey:jersey-core:1.8">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8/jersey-core-1.8.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8/jersey-core-1.8-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/com/sun/jersey/jersey-core/1.8/jersey-core-1.8-sources.jar!/" />
+      </SOURCES>
+    </library>
     <library name="Maven: de.undercouch:bson4jackson:1.3.0">
       <CLASSES>
         <root url="jar://$MAVEN_REPOSITORY$/de/undercouch/bson4jackson/1.3.0/bson4jackson-1.3.0.jar!/" />
@@ -277,6 +332,17 @@
       </JAVADOC>
       <SOURCES>
         <root url="jar://$MAVEN_REPOSITORY$/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1-sources.jar!/" />
+      </SOURCES>
+    </library>
+    <library name="Maven: org.jboss.weld.se:weld-se:1.1.8.Final">
+      <CLASSES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/weld/se/weld-se/1.1.8.Final/weld-se-1.1.8.Final.jar!/" />
+      </CLASSES>
+      <JAVADOC>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/weld/se/weld-se/1.1.8.Final/weld-se-1.1.8.Final-javadoc.jar!/" />
+      </JAVADOC>
+      <SOURCES>
+        <root url="jar://$MAVEN_REPOSITORY$/org/jboss/weld/se/weld-se/1.1.8.Final/weld-se-1.1.8.Final-sources.jar!/" />
       </SOURCES>
     </library>
     <library name="Maven: org.mongodb:mongo-java-driver:2.7.2">

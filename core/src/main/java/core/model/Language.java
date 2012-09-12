@@ -2,14 +2,13 @@ package core.model;
 
 import core.model.enums.I18nToken;
 import net.vz.mongodb.jackson.MongoCollection;
-import org.codehaus.jackson.annotate.JsonIgnore;
 
 /**
  * Date: 03/09/12
  * Time: 12:31
  */
 @MongoCollection(name = "languages")
-public class Language extends BaseEntity implements I18nIF{
+public class Language extends BaseNonEmbeddableEntity implements I18nIF{
     private String languageCode;
     private String description;
 

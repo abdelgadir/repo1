@@ -1,33 +1,63 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-  <groupId>core</groupId>
-  <artifactId>core</artifactId>
-  <version>0.1-alpha</version>
-  <packaging>jar</packaging>
+    <groupId>core</groupId>
+    <artifactId>core</artifactId>
+    <version>0.1-alpha</version>
+    <packaging>jar</packaging>
 
-  <name>core</name>
-  <url>http://maven.apache.org</url>
+    <name>core</name>
+    <url>http://maven.apache.org</url>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <jeeunit.version>0.9.0</jeeunit.version>
+    </properties>
 
-  <dependencies>
+    <dependencies>
 
-    <dependency>
-        <groupId>net.vz.mongodb.jackson</groupId>
-        <artifactId>mongo-jackson-mapper</artifactId>
-        <version>1.4.2</version>
-    </dependency>
+        <dependency>
+            <groupId>net.vz.mongodb.jackson</groupId>
+            <artifactId>mongo-jackson-mapper</artifactId>
+            <version>1.4.2</version>
+        </dependency>
 
-    <!-- test dependencies -->
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.10</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+        <!-- weld dependency when running in JavaEE 6 container -->
+        <!--<dependency>-->
+        <!--<groupId>javax.enterprise</groupId>-->
+        <!--<artifactId>cdi-api</artifactId>-->
+        <!--<version>1.0-SP2</version>-->
+        <!--<scope>provided</scope>-->
+        <!--</dependency>-->
+
+        <!--weld for Java-SE -->
+        <dependency>
+            <groupId>org.jboss.weld.se</groupId>
+            <artifactId>weld-se</artifactId>
+            <version>1.1.8.Final</version>
+            <!--<version>1.1.5.Final</version>-->
+        </dependency>
+
+        <!-- **************************** test dependencies ***********************************************-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.10</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.googlecode.jeeunit</groupId>
+            <artifactId>jeeunit-weld-se</artifactId>
+            <version>${jeeunit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.googlecode.jeeunit</groupId>
+            <artifactId>jeeunit-cdi</artifactId>
+            <version>${jeeunit.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
 </project>

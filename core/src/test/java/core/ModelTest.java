@@ -1,5 +1,6 @@
 package core;
 
+import com.googlecode.jeeunit.cdi.CdiJUnitRunner;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.Mongo;
@@ -11,7 +12,9 @@ import net.vz.mongodb.jackson.MongoCollection;
 import net.vz.mongodb.jackson.WriteResult;
 import org.bson.types.ObjectId;
 import org.junit.*;
+import org.junit.runner.RunWith;
 
+import javax.inject.Inject;
 import java.net.UnknownHostException;
 
 import static org.junit.Assert.assertEquals;
@@ -21,10 +24,14 @@ import static org.junit.Assert.assertNotNull;
  * Date: 03/09/12
  * Time: 14:18
  */
+@RunWith(CdiJUnitRunner.class)
 public class ModelTest {
     protected static Mongo mongo = null;
     protected static DB db;
     protected static JacksonDBCollection<Language,  ObjectId> jacksonLangColl;
+
+    @Inject
+    private Language testInjectedLanguage;
 
     @BeforeClass
     public static void oneTimeSetUp() {
@@ -61,6 +68,10 @@ public class ModelTest {
     @Test
     public void testMultiply() {
         assertEquals("testing via junit", 1, 1);
+    }
+
+    public void testCDIInjection(){
+        assertNotNull(testInjectedLanguage);
     }
 
     @Test

@@ -8,7 +8,7 @@ import net.vz.mongodb.jackson.MongoCollection;
  * Time: 12:49
  */
 @MongoCollection(name = "countries")
-public class Country extends BaseEntity implements I18nIF{
+public class Country extends BaseNonEmbeddableEntity implements I18nIF{
     private String countryCode;
     private String flagImageFilePath;
     private String description;
