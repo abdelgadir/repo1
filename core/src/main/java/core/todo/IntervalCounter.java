@@ -120,13 +120,19 @@ public class IntervalCounter<T> implements Serializable {
      */
     private void prepareIntervalPointSlots() {
         this.intervalPoints = new TreeMap<LocalDate, Integer>();
-        LocalDate localDate = LocalDate.now();
+        LocalDate localDate = LocalDate.now(DateTimeZone.UTC);
         if (intervalType == IntervalType.MONTHLY) {
+		    //first add slot for the current month	
+            intervalPoints.put(localDate.withDayOfMonth(1), 0);
+            //then workout slots for previous months
             for (int i = intervalLength; i > 0; i--) {
                 LocalDate prevPoint = localDate.minusMonths(i).withDayOfMonth(1);
                 intervalPoints.put(prevPoint, 0);
             }
         } else if (intervalType == IntervalType.DAILY) {
+            //first add slot for the current day
+            intervalPoints.put(localDate, 0);
+            //then workout slots for previous days
             for (int i = intervalLength; i > 0; i--) {
                 LocalDate prevPoint = localDate.minusDays(i);
                 intervalPoints.put(prevPoint, 0);
@@ -141,7 +147,7 @@ public class IntervalCounter<T> implements Serializable {
 
     private LocalDate makeIntervalPointDate(Integer year, Integer month, Integer day) {
         //missing days default to beginning of month
-        LocalDate point = new LocalDate(year, month, day == null ? 1 : day);
+        LocalDate point = new LocalDate(DateTimeZone.UTC).withYear(year).withMonthOfYear(month).withDayOfMonth(day == null ? 1 : day);
         return point;
     }
 
@@ -237,6 +243,15 @@ public class IntervalCounter<T> implements Serializable {
         Map<LocalDate, Integer> otherPoints = other.getIntervalPoints();
         Map<LocalDate, Integer> thisPoints = getIntervalPoints();
         for (LocalDate ld : otherPoints.keySet()) {
+            Integer thisCount = thisPoints.get(ld);
+            Integer otherCount = otherPoints.get(ld);
+            if(thisCount == null){
+                //TODO logger.debug("count is null for localDate: "+ld.toString()+" on intervalCounter: "+label);
+            }
+            if(otherCount==null){
+                //TODO logger.debug("count is null for localDate: "+ld.toString()+" on intervalCounter: "+other.label);
+            }
+
             Integer combinedCount = otherPoints.get(ld) + thisPoints.get(ld);
             thisPoints.put(ld, combinedCount);
         }
