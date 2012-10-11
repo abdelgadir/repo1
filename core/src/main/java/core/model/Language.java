@@ -8,7 +8,7 @@ import net.vz.mongodb.jackson.MongoCollection;
  * Time: 12:31
  */
 @MongoCollection(name = "languages")
-public class Language extends BaseNonEmbeddableEntity implements I18nIF{
+public class Language extends BaseNonEmbeddableEntity implements Ii18n {
     private String languageCode;
     private String description;
 

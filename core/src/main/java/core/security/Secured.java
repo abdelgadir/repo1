@@ -12,6 +12,6 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @InterceptorBinding
 public @interface Secured {
-    //TODO rethink the defaukt
+    //TODO rethink the default
     String permission() default "*";
 }
